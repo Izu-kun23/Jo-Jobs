@@ -122,31 +122,6 @@ class PageController
 
 
 
-
-//        if (isset($_POST['submit'])) {
-//            if ($_FILES['cv']['error'] == 0) {
-//                $parts = explode('.', $_FILES['cv']['name']);
-//
-//                $extension = end($parts);
-//
-//                $fileName = uniqid() . '.' . $extension;
-//
-//                move_uploaded_file($_FILES['cv']['tmp_name'], 'cvs/' . $fileName);
-//
-//                $criteria = ['name' => $_POST['name'], 'email' => $_POST['email'], 'details' => $_POST['details'], 'jobId' => $_POST['jobId'], 'cv' => $fileName];
-//
-//                $job = $jobTable->insert($criteria);
-//
-//                echo 'Your application is complete. We will contact you after the closing date.';
-//            } else {
-//                echo 'There was an error uploading your CV';
-//            }
-//        }
-//
-//        $job = $jobTable->findAll('id', $_GET['id'])[0];
-//        return ['template' => 'apply.html.php', 'title' => 'Apply', 'variables' => ['job' => $job]];
-
-
     public function login(): array
     {
         $errMsgArray = [];
